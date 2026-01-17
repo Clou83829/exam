@@ -1,6 +1,7 @@
 class User:
-     def init(self, user_id, name): self.id = user_id 
-     self.name = name
+     def init(self, user_id, name):
+      self.id = user_id 
+      self.name = name
 
 class Seat:
      FREE = "свободно" 
@@ -16,9 +17,10 @@ def __str__(self):
     user_name = self.user.name if self.user else "никто"
     return f"место {self.id}: {self.status} ({user_name})"
 class EventSession:
-     def init(self, session_id, time): self.id = session_id 
-     self.time = time 
-     self.seats = {}
+     def init(self, session_id, time): 
+         self.id = session_id 
+         self.time = time 
+         self.seats = {}
 
 for i in range(1, 7):
         seat_id = f"A{i}"
